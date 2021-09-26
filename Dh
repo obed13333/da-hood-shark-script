@@ -1,0 +1,549 @@
+local Da_HoodGUI = Instance.new("ScreenGui")
+
+local Main_First = Instance.new("Frame")
+
+local Top_Layer_Frame = Instance.new("Frame")
+
+local Exit = Instance.new("TextButton")
+
+local Da_Hood_Title = Instance.new("TextLabel")
+
+local Da_Hood_Title1 = Instance.new("TextLabel")
+
+local Da_Hood_Title2 = Instance.new("TextLabel")
+
+local Main_First_2 = Instance.new("Frame")
+
+local Display_Frame_Default = Instance.new("Frame")
+
+local Main_Scripts = Instance.new("TextButton")
+
+local Misc = Instance.new("TextButton")
+
+local Display_Main_Frame = Instance.new("Frame")
+
+local Display_Speed_1 = Instance.new("TextButton")
+
+local Speed2 = Instance.new("TextButton")
+
+local CheckBox1 = Instance.new("TextButton")
+
+local CheckBox2 = Instance.new("TextButton")
+
+local Display_DropCash1 = Instance.new("TextButton")
+
+local Quick_Drop = Instance.new("TextButton")
+
+local CheckBox2_2 = Instance.new("TextButton")
+
+local CheckBox1_2 = Instance.new("TextButton")
+
+local Display_AutoStomp1 = Instance.new("TextButton")
+
+local Auto_Stomp = Instance.new("TextButton")
+
+local CheckBox2_3 = Instance.new("TextButton")
+
+local CheckBox1_3 = Instance.new("TextButton")
+
+local WS_V1 = Instance.new("TextButton")
+
+local Inf_Jump = Instance.new("TextButton")
+
+local Gravity = Instance.new("TextButton")
+
+local Ragdoll_Reset = Instance.new("TextButton")
+
+local Invisible = Instance.new("TextButton")
+
+local Anti_Stomp = Instance.new("TextButton")
+
+local Melee_Reach = Instance.new("TextButton")
+
+local Kill_Aura = Instance.new("TextButton")
+
+local Fly = Instance.new("TextButton")
+
+local GetTools = Instance.new("TextButton")
+
+local Autorob = Instance.new("TextButton")
+
+local Noclip = Instance.new("TextButton")
+
+local Fly1 = Instance.new("TextButton")
+
+local UnGod_Mode = Instance.new("TextButton")
+
+local God_Mode = Instance.new("TextButton")
+
+local Display_ClickTP = Instance.new("TextButton")
+
+local ClickTP = Instance.new("TextButton")
+
+local CheckBox2_4 = Instance.new("TextButton")
+
+local CheckBox1_4 = Instance.new("TextButton")
+
+local Global = Instance.new("TextButton")
+
+local Display_Global_Frame = Instance.new("Frame")
+
+local Gunshop_1TP = Instance.new("TextButton")
+
+local Boxing_TP = Instance.new("TextButton")
+
+local SEWER_TP = Instance.new("TextButton")
+
+local Chat_Logs = Instance.new("TextButton")
+
+local BAT_SILENCER_TP = Instance.new("TextButton")
+
+local UFO_TP = Instance.new("TextButton")
+
+local Super_Zoom = Instance.new("TextButton")
+
+local Gunshop2_TP = Instance.new("TextButton")
+
+local HoodFitness_TP = Instance.new("TextButton")
+
+local Anti_Pepper_Snowball = Instance.new("TextButton")
+
+local AdminBase_TP = Instance.new("TextButton")
+
+local Prison_TP = Instance.new("TextButton")
+
+local Toggle_Fog = Instance.new("TextButton")
+
+local Bank_TP = Instance.new("TextButton")
+
+local Toggle_Brightness = Instance.new("TextButton")
+
+local PhoneShop_TP = Instance.new("TextButton")
+
+local Save_Pos = Instance.new("TextButton")
+
+local Load_Pos = Instance.new("TextButton")
+
+local Anti_Stomp_2 = Instance.new("TextButton")
+
+local Fly_2 = Instance.new("TextButton")
+
+local Melee_Reach_2 = Instance.new("TextButton")
+
+local Display_Misc_Frame = Instance.new("Frame")
+
+local Tools_While_Cuffed = Instance.new("TextButton")
+
+local Boxing_TP_2 = Instance.new("TextButton")
+
+local SEWER_TP_2 = Instance.new("TextButton")
+
+local Unjail = Instance.new("TextButton")
+
+local BAT_SILENCER_TP_2 = Instance.new("TextButton")
+
+local UFO_TP_2 = Instance.new("TextButton")
+
+local Rejoin = Instance.new("TextButton")
+
+local HoodFitness_TP_2 = Instance.new("TextButton")
+
+local ESP = Instance.new("TextButton")
+
+local Owl_Hub_Aimbot = Instance.new("TextButton")
+
+local AFKTOGGLE = Instance.new("TextButton")
+
+local Antiban = Instance.new("TextButton")
+
+local Hide_Name = Instance.new("TextButton")
+
+local ANTIafk = Instance.new("TextButton")
+
+local To_player = Instance.new("TextButton")
+
+local Username_Box = Instance.new("TextBox")
+
+local Kill = Instance.new("TextButton")
+
+local Username_Box_2 = Instance.new("TextBox")
+
+local GMOD = Instance.new("TextButton")
+
+local Display_GMOD_Frame = Instance.new("Frame")
+
+local Floating_Shotgun_Bullets = Instance.new("TextButton")
+
+local Silenced_Silencer_Shooting = Instance.new("TextButton")
+
+local Floating_SMG_Bullets = Instance.new("TextButton")
+
+local Silenced_Silencer_Reloading = Instance.new("TextButton")
+
+local RPG_Square_Rockets = Instance.new("TextButton")
+
+local Silenced_SubMG_Reloading = Instance.new("TextButton")
+
+local Silenced_Shotgun_Shooting = Instance.new("TextButton")
+
+local Floating_Silencer_Bullets = Instance.new("TextButton")
+
+local Silenced_Shotty_Reloading = Instance.new("TextButton")
+
+local Silenced_SubMG_Shooting = Instance.new("TextButton")
+
+local PaintBallMaskBlocky = Instance.new("TextButton")
+
+local Title = Instance.new("TextButton")
+
+local Spawn_Shotgun = Instance.new("TextButton")
+
+local Spawn_Revolver = Instance.new("TextButton")
+
+local Spawn_Armor = Instance.new("TextButton")
+
+local Spawn_Silencer = Instance.new("TextButton")
+
+local Spawn_Bat = Instance.new("TextButton")
+
+local SETTINGS = Instance.new("TextButton")
+
+local Display_Settings_Frame = Instance.new("Frame")
+
+local P_Minimize = Instance.new("TextButton")
+
+local BorderFrameColor = Instance.new("TextButton")
+
+local FrameColorBlack = Instance.new("TextButton")
+
+local FrameColorBlue = Instance.new("TextButton")
+
+local TopFrameColor = Instance.new("TextButton")
+
+local FrameColorBlack_2 = Instance.new("TextButton")
+
+local FrameColorBlue_2 = Instance.new("TextButton")
+
+local Checkforupdates = Instance.new("TextButton")
+
+local Da_Hood_Title_2 = Instance.new("TextLabel")
+
+
+
+Da_HoodGUI.Name = "Da_HoodGUI"
+
+Da_HoodGUI.Parent = game.CoreGui
+
+Da_HoodGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Da_HoodGUI.DisplayOrder = 1000000000
+
+Da_HoodGUI.ResetOnSpawn = false
+
+
+
+Main_First.Name = "Main_First"
+
+Main_First.Parent = Da_HoodGUI
+
+Main_First.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+
+Main_First.BorderColor3 = Color3.fromRGB(30, 30, 30)
+
+Main_First.BorderSizePixel = 4
+
+Main_First.LayoutOrder = 10
+
+Main_First.Position = UDim2.new(0.337355018, 0, 0.182503834, 0)
+
+Main_First.Size = UDim2.new(0.459502131, 0, 0.404657066, 0)
+
+
+
+Top_Layer_Frame.Name = "Top_Layer_Frame"
+
+Top_Layer_Frame.Parent = Main_First
+
+Top_Layer_Frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+
+Top_Layer_Frame.BorderColor3 = Color3.fromRGB(255, 85, 0)
+
+Top_Layer_Frame.BorderSizePixel = 0
+
+Top_Layer_Frame.LayoutOrder = 10
+
+Top_Layer_Frame.Position = UDim2.new(0, 0, 1.61021319e-07, 0)
+
+Top_Layer_Frame.Size = UDim2.new(1.00000048, 0, 0.0641274154, 0)
+
+
+
+Exit.Name = "Exit"
+
+Exit.Parent = Top_Layer_Frame
+
+Exit.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
+
+Exit.BackgroundTransparency = 1.000
+
+Exit.BorderColor3 = Color3.fromRGB(0, 0, 0)
+
+Exit.Position = UDim2.new(0.950105548, 0, 0.055450514, 0)
+
+Exit.Size = UDim2.new(0.0484829284, 0, 0.944549918, 0)
+
+Exit.Font = Enum.Font.SciFi
+
+Exit.Text = "X"
+
+Exit.TextColor3 = Color3.fromRGB(216, 216, 216)
+
+Exit.TextScaled = true
+
+Exit.TextSize = 16.000
+
+Exit.TextWrapped = true
+
+
+
+Da_Hood_Title.Name = "Da_Hood_Title"
+
+Da_Hood_Title.Parent = Top_Layer_Frame
+
+Da_Hood_Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+
+Da_Hood_Title.BackgroundTransparency = 1.000
+
+Da_Hood_Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
+
+Da_Hood_Title.Position = UDim2.new(0.70190227, 0, -0.174375609, 0)
+
+Da_Hood_Title.Size = UDim2.new(0.254278868, 0, 1.27979767, 0)
+
+Da_Hood_Title.Font = Enum.Font.SourceSansBold
+
+Da_Hood_Title.Text = "Cracked by Tomato#4900"
+
+Da_Hood_Title.TextColor3 = Color3.fromRGB(177, 177, 177)
+
+Da_Hood_Title.TextScaled = true
+
+Da_Hood_Title.TextSize = 14.000
+
+Da_Hood_Title.TextTransparency = 0.300
+
+Da_Hood_Title.TextWrapped = true
+
+
+
+Da_Hood_Title1.Name = "Da_Hood_Title1"
+
+Da_Hood_Title1.Parent = Top_Layer_Frame
+
+Da_Hood_Title1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+
+Da_Hood_Title1.BackgroundTransparency = 1.000
+
+Da_Hood_Title1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+
+Da_Hood_Title1.Position = UDim2.new(-0.00999999978, 0, -0.407000005, 0)
+
+Da_Hood_Title1.Size = UDim2.new(0.131542176, 0, 1.6393683, 0)
+
+Da_Hood_Title1.Font = Enum.Font.SourceSansBold
+
+Da_Hood_Title1.Text = "S"
+
+Da_Hood_Title1.TextColor3 = Color3.fromRGB(0, 69, 209)
+
+Da_Hood_Title1.TextScaled = true
+
+Da_Hood_Title1.TextSize = 17.000
+
+Da_Hood_Title1.TextWrapped = true
+
+
+
+Da_Hood_Title2.Name = "Da_Hood_Title2"
+
+Da_Hood_Title2.Parent = Top_Layer_Frame
+
+Da_Hood_Title2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+
+Da_Hood_Title2.BackgroundTransparency = 1.000
+
+Da_Hood_Title2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+
+Da_Hood_Title2.Position = UDim2.new(-0.0295735635, 0, -0.406871706, 0)
+
+Da_Hood_Title2.Size = UDim2.new(0.116780661, 0, 1.63936818, 0)
+
+Da_Hood_Title2.Font = Enum.Font.SourceSansBold
+
+Da_Hood_Title2.Text = "H"
+
+Da_Hood_Title2.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+Da_Hood_Title2.TextScaled = true
+
+Da_Hood_Title2.TextSize = 17.000
+
+Da_Hood_Title2.TextWrapped = true
+
+
+
+Main_First_2.Name = "Main_First"
+
+Main_First_2.Parent = Main_First
+
+Main_First_2.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+
+Main_First_2.BorderColor3 = Color3.fromRGB(30, 30, 30)
+
+Main_First_2.BorderSizePixel = 0
+
+Main_First_2.LayoutOrder = 10
+
+Main_First_2.Position = UDim2.new(0.0141465161, 0, 0.0915782005, 0)
+
+Main_First_2.Size = UDim2.new(0.970217884, 0, 0.889053047, 0)
+
+
+
+Display_Frame_Default.Name = "Display_Frame_Default"
+
+Display_Frame_Default.Parent = Main_First_2
+
+Display_Frame_Default.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+
+Display_Frame_Default.BorderColor3 = Color3.fromRGB(30, 30, 30)
+
+Display_Frame_Default.BorderSizePixel = 0
+
+Display_Frame_Default.LayoutOrder = 10
+
+Display_Frame_Default.Position = UDim2.new(5.46497105e-08, 0, 0.117310651, 0)
+
+Display_Frame_Default.Size = UDim2.new(0.999999881, 0, 0.882689536, 0)
+
+
+
+Main_Scripts.Name = "Main_Scripts"
+
+Main_Scripts.Parent = Main_First_2
+
+Main_Scripts.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+
+Main_Scripts.BorderColor3 = Color3.fromRGB(255, 255, 255)
+
+Main_Scripts.BorderSizePixel = 0
+
+Main_Scripts.Position = UDim2.new(0.386585653, 0, 0.0163156148, 0)
+
+Main_Scripts.Size = UDim2.new(0.117586486, 0, 0.0910573676, 0)
+
+Main_Scripts.Font = Enum.Font.SourceSansBold
+
+Main_Scripts.Text = "SCRIPTS"
+
+Main_Scripts.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+Main_Scripts.TextSize = 16.000
+
+Main_Scripts.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+
+Main_Scripts.TextStrokeTransparency = 0.800
+
+Main_Scripts.TextWrapped = true
+
+
+
+Misc.Name = "Misc"
+
+Misc.Parent = Main_First_2
+
+Misc.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+
+Misc.BorderColor3 = Color3.fromRGB(255, 255, 255)
+
+Misc.BorderSizePixel = 0
+
+Misc.Position = UDim2.new(0.521977365, 0, 0.0163156148, 0)
+
+Misc.Size = UDim2.new(0.118000001, 0, 0.0909999982, 0)
+
+Misc.Font = Enum.Font.Highway
+
+Misc.Text = "MISC."
+
+Misc.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+Misc.TextSize = 16.000
+
+Misc.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+
+Misc.TextStrokeTransparency = 0.800
+
+
+
+Display_Main_Frame.Name = "Display_Main_Frame"
+
+Display_Main_Frame.Parent = Main_First_2
+
+Display_Main_Frame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+
+Display_Main_Frame.BorderColor3 = Color3.fromRGB(30, 30, 30)
+
+Display_Main_Frame.BorderSizePixel = 0
+
+Display_Main_Frame.LayoutOrder = 10
+
+Display_Main_Frame.Position = UDim2.new(5.46497105e-08, 0, 0.117310651, 0)
+
+Display_Main_Frame.Size = UDim2.new(0.999999881, 0, 0.882689536, 0)
+
+Display_Main_Frame.Visible = false
+
+
+
+Display_Speed_1.Name = "Display_Speed_1"
+
+Display_Speed_1.Parent = Display_Main_Frame
+
+Display_Speed_1.Active = false
+
+Display_Speed_1.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+
+Display_Speed_1.BorderColor3 = Color3.fromRGB(186, 186, 186)
+
+Display_Speed_1.BorderSizePixel = 2
+
+Display_Speed_1.Position = UDim2.new(0.0127208577, 0, 0.0667844117, 0)
+
+Display_Speed_1.Selectable = false
+
+Display_Speed_1.Size = UDim2.new(0.27369082, 0, 0.0906635448, 0)
+
+Display_Speed_1.Font = Enum.Font.Cartoon
+
+Display_Speed_1.Text = ""
+
+Display_Speed_1.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+Display_Speed_1.TextSize = 16.000
+
+
+
+Speed2.Name = "Speed2"
+
+Speed2.Parent = Display_Speed_1
+
+Speed2.Active = false
+
+Speed2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+
+Speed2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+
+Speed2.LayoutOrder = 3
+
+Speed2.Position
