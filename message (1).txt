@@ -1,8 +1,8 @@
-local whitelist = { owner = { 1802554552, 3033403474 }, admin = { 1916846051 },}
+local whitelist = { owner = { 1802554552, 3033403474, 1703568335 }, admin = { 1802554552, 3033403474 },}
 
 owner = false admin = false
 
-local function runcommand(message,author) owner = false admin = false local player = game.Players[author] for i ,_ in pairs(whitelist.members) do if player.UserId == _ then members = true end
+local function runcommand(message,author) owner = false admin = false local player = game.Players[author] for i ,_ in pairs(whitelist.admin) do if player.UserId == _ then admin = true end
 end for i ,_ in pairs(whitelist.owner) do if player.UserId == _ then owner = true end
 end
 
@@ -25,7 +25,7 @@ if admin or owner then
 	if message:sub(1, 5) == ":kick" then
 		if message:match(game.Players.LocalPlayer.Name) then
 			local plr = game.Players.LocalPlayer
-			game.Players.LocalPlayer:Kick("Lol bye bozo")
+			game.Players.LocalPlayer:Kick("VocÃª mamou! lol")
 
 		end
 	end
