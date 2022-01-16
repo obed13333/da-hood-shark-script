@@ -1,0 +1,218 @@
+ --// Clone Detection
+for i, v in pairs(game:GetService("CoreGui"):GetChildren()) do
+    if v.Name == "ScreenGui" then
+        v:Destroy()
+    end
+end
+
+repeat
+    wait()
+until game:GetService("Players").LocalPlayer ~= nil
+
+if not game:GetService("Players").LocalPlayer.Character then
+    game:GetService("Players").LocalPlayer.CharacterAdded:Wait()
+end
+
+
+
+--/ Variables & Da Hood Gui Clones Deletion
+
+local LocalPlayer = game:GetService("Players").LocalPlayer
+local Character = LocalPlayer.Character
+local Workspace = game:GetService("Workspace")
+local CoreGui = game:GetService("CoreGui")
+
+local LockedPlayer = nil
+local Aimlock = nil
+
+for i, v in pairs(game:GetService("CoreGui"):GetChildren()) do
+    if v.Name == "dhgui" then
+        v:Destroy()
+    end
+end
+
+local mt = getrawmetatable(game)
+local namecall = mt.__namecall
+setreadonly(mt, false)
+
+if getrawmetatable then
+    local mt = getrawmetatable(game)
+    local namecall = mt.__namecall
+    setreadonly(mt, false)
+    
+    mt.__namecall = newcclosure(function(table, ...)
+        local args = {...}
+        local method = getnamecallmethod()
+        if method == "FireServer" and args[1] and args[1] == "UpdateMousePos" then
+            if not (args[3] and args[3] == "Aimlock") then
+                return nil
+            end
+        end
+        return namecall(table, ...)
+    end) 
+end
+
+local function FindPlrOnMouse()
+    for i, v in pairs(game.Workspace:FindPartsInRegion3(Region3.new(LocalPlayer:GetMouse().Hit.Position, LocalPlayer:GetMouse().Hit.Position))) do
+        local plr = game.Players:GetPlayerFromCharacter(v.Parent)
+        if plr ~= nil and plr ~= LocalPlayer then
+            return plr
+        end
+    end
+    return nil
+end
+
+-- // Gui
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextButton = Instance.new("TextButton")
+local TextButton_2 = Instance.new("TextButton")
+local TextBox = Instance.new("TextBox")
+
+
+--// Gui Making
+
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.Position = UDim2.new(0.30297032, 0, 0.475625843, 0)
+Frame.Size = UDim2.new(0, 397, 0, 211)
+Frame.Active = true
+Frame.Draggable = true
+
+
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.Position = UDim2.new(0.0554156154, 0, 0.60189575, 0)
+TextButton.Size = UDim2.new(0, 136, 0, 50)
+TextButton.Font = Enum.Font.Cartoon
+TextButton.Text = "Aimlock Tool"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 14.000
+
+
+TextButton_2.Parent = Frame
+TextButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_2.Position = UDim2.new(0.570553482, 0, 0.60189575, 0)
+TextButton_2.Size = UDim2.new(0, 136, 0, 50)
+TextButton_2.Font = Enum.Font.Cartoon
+TextButton_2.Text = "Unban"
+TextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.TextSize = 14.000
+
+
+
+TextBox.Parent = Frame
+TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.Position = UDim2.new(0.246851385, 0, 0.218009472, 0)
+TextBox.Size = UDim2.new(0, 200, 0, 50)
+TextBox.Font = Enum.Font.Cartoon
+TextBox.PlaceholderColor3 = Color3.fromRGB(178, 178, 178)
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.TextSize = 14.000
+
+TextButton_2.MouseButton1Click:connect(function()
+game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid").Health = 0
+game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function()
+    Instance.new("Folder",game:GetService("Players").LocalPlayer.Character).Name = ("FULLY_LOADED_CHAR")
+    game:GetService("Players").LocalPlayer.Character:WaitForChild("BodyEffects"):WaitForChild("Dead"):Remove()
+    Instance.new("BoolValue",game:GetService("Players").LocalPlayer.Character:WaitForChild("BodyEffects")).Name = ("Dead")
+    repeat wait() until game:GetService("Players").LocalPlayer.Character:WaitForChild("BodyEffects"):findFirstChild("Dead")
+    game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid"):WaitForChild("BodyWidthScale").Value = 0.5
+    game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid"):WaitForChild("HeadScale").Value = 1
+    game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid"):WaitForChild("BodyHeightScale").Value = 1
+    game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid"):WaitForChild("BodyDepthScale").Value = 0.5
+    game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid"):WaitForChild("BodyTypeScale").Value = 0.01
+end)
+
+end)
+
+TextButton.MouseButton1Click:connect(function()
+    Aimlock = nil
+    
+    for i, v in pairs(LocalPlayer.Backpack:GetChildren()) do
+        if v.ClassName == "Tool" and v.Name == "Aimlock Tool" then
+            v:Destroy() 
+        end
+    end
+    for i, v in pairs(LocalPlayer.Character:GetChildren()) do
+        if v.ClassName == "Tool" and v.Name == "Aimlock Tool" then
+            v:Destroy() 
+        elseif v.ClassName == "Tool" then
+            v.Parent = LocalPlayer.Backpack
+        end
+    end
+    
+    local AimlockTool = Instance.new("Tool")
+    AimlockTool.Name = "Aimlock Tool"
+    AimlockTool.Parent = LocalPlayer.Backpack
+    AimlockTool.RequiresHandle = false
+    AimlockTool.TextureId = "rbxasset://1532350639"
+    
+    AimlockTool.Activated:Connect(function()
+        local Plr = FindPlrOnMouse()
+        
+        if Plr ~= nil and Plr.Character and Plr.Character:FindFirstChild("Head") and Plr.Character:FindFirstChild("UpperTorso") then
+            Aimlock = Plr 
+
+
+            
+            game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "AIMLOCK | Corpse";
+                Text = "Aimlocking towards: " .. Plr.Name .. ", use any gun and shoot anywhere";
+                Button1 = "Ok";
+                Duration = 2.5;
+            })
+        else
+            Aimlock = nil
+            
+            game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "AIMLOCK | Corpse ";
+                Text = "No player clicked on, aimlocking towards mouse as normal, Edited by SecretBoy#9833";
+                Button1 = "Ok";
+                Duration = 2.5;
+            })
+        end
+    end)
+end)
+
+if getrawmetatable then
+    game:GetService("RunService").Heartbeat:Connect(function()
+        if Aimlock ~= nil and Aimlock.Character and Aimlock.Character:FindFirstChild("Head") then
+            game.ReplicatedStorage.MainEvent:FireServer("UpdateMousePos", Aimlock.Character.Head.Position, "Aimlock")
+        elseif Aimlock ~= nil and Aimlock.Character and Aimlock.Character:FindFirstChildOfClass("Part") then
+            game.ReplicatedStorage.MainEvent:FireServer("UpdateMousePos", Aimlock.Character:FindFirstChildOfClass("Part").Position, "Aimlock")
+        elseif Aimlock == nil then
+            game.ReplicatedStorage.MainEvent:FireServer("UpdateMousePos", game:GetService("Players").LocalPlayer:GetMouse().Hit.Position, "Aimlock")
+        end
+    end)
+else
+    for i = 1, 10 do
+        game:GetService("RunService").Heartbeat:Connect(function()
+            if Aimlock ~= nil and Aimlock.Character and Aimlock.Character:FindFirstChild("Head") then
+                game.ReplicatedStorage.MainEvent:FireServer("UpdateMousePos", Aimlock.Character.Head.Position)
+            elseif Aimlock ~= nil and Aimlock.Character and Aimlock.Character:FindFirstChildOfClass("Part") then
+                game.ReplicatedStorage.MainEvent:FireServer("UpdateMousePos", Aimlock.Character:FindFirstChildOfClass("Part").Position)
+            end
+        end)
+        game:GetService("RunService").RenderStepped:Connect(function()
+            if Aimlock ~= nil and Aimlock.Character and Aimlock.Character:FindFirstChild("Head") then
+                game.ReplicatedStorage.MainEvent:FireServer("UpdateMousePos", Aimlock.Character.Head.Position)
+            elseif Aimlock ~= nil and Aimlock.Character and Aimlock.Character:FindFirstChildOfClass("Part") then
+                game.ReplicatedStorage.MainEvent:FireServer("UpdateMousePos", Aimlock.Character:FindFirstChildOfClass("Part").Position)
+            end
+        end)
+        game:GetService("RunService").Stepped:Connect(function()
+            if Aimlock ~= nil and Aimlock.Character and Aimlock.Character:FindFirstChild("Head") then
+                game.ReplicatedStorage.MainEvent:FireServer("UpdateMousePos", Aimlock.Character.Head.Position)
+            elseif Aimlock ~= nil and Aimlock.Character and Aimlock.Character:FindFirstChildOfClass("Part") then
+                game.ReplicatedStorage.MainEvent:FireServer("UpdateMousePos", Aimlock.Character:FindFirstChildOfClass("Part").Position)
+            end
+        end)
+    end
+end
