@@ -153,12 +153,11 @@ game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function()
     game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid"):WaitForChild("BodyDepthScale").Value = 0.5
     game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid"):WaitForChild("BodyTypeScale").Value = 0.01
 
+ TextButton_2.MouseButton1Click:connect(function()
+    plr.Character.BodyEffects:FindFirstChild('BreakingParts'):Destroy()
+    game:GetService("Players").LocalPlayer.PlayerGui.MainScreenGui.Bar.HP.Picture.Life.Visible = true
 end)
-
- TextButton_2.MouseButton1Click:connect(function(GOD)
-				plr.Character.BodyEffects:FindFirstChild('BreakingParts'):Destroy()
-				game:GetService("Players").LocalPlayer.PlayerGui.MainScreenGui.Bar.HP.Picture.Life.Visible = true
-	end)
+end)
 end)
 
 TextButton.MouseButton1Click:connect(function()
