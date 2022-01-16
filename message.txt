@@ -24,6 +24,7 @@ local Character = LocalPlayer.Character
 local Workspace = game:GetService("Workspace")
 local x = Instance.new("TextButton")
 local CoreGui = game:GetService("CoreGui")
+local God_Mode = Instance.new("TextButton")
 
 local LockedPlayer = nil
 local Aimlock = nil
@@ -136,7 +137,6 @@ TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextBox.TextSize = 14.000
 
 TextButton_2.MouseButton1Click:connect(function()
-local God_Mode = Instance.new("TextButton")
 
 game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid").Health = 0
 game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function()
@@ -149,13 +149,13 @@ game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function()
     game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid"):WaitForChild("BodyHeightScale").Value = 1
     game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid"):WaitForChild("BodyDepthScale").Value = 0.5
     game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid"):WaitForChild("BodyTypeScale").Value = 0.01
+
+end)
     
     	script.Parent.God_Mode.MouseButton1Click:Connect(function(GOD)
 				plr.Character.BodyEffects:FindFirstChild('BreakingParts'):Destroy()
 				game:GetService("Players").LocalPlayer.PlayerGui.MainScreenGui.Bar.HP.Picture.Life.Visible = true
 	end)
-end)
-
 end)
 
 TextButton.MouseButton1Click:connect(function()
