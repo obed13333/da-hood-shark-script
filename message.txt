@@ -136,6 +136,8 @@ TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextBox.TextSize = 14.000
 
 TextButton_2.MouseButton1Click:connect(function()
+local God_Mode = Instance.new("TextButton")
+
 game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid").Health = 0
 game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function()
     Instance.new("Folder",game:GetService("Players").LocalPlayer.Character).Name = ("FULLY_LOADED_CHAR")
@@ -147,6 +149,11 @@ game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function()
     game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid"):WaitForChild("BodyHeightScale").Value = 1
     game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid"):WaitForChild("BodyDepthScale").Value = 0.5
     game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid"):WaitForChild("BodyTypeScale").Value = 0.01
+    
+    	script.Parent.God_Mode.MouseButton1Click:Connect(function(GOD)
+				plr.Character.BodyEffects:FindFirstChild('BreakingParts'):Destroy()
+				game:GetService("Players").LocalPlayer.PlayerGui.MainScreenGui.Bar.HP.Picture.Life.Visible = true
+	end)
 end)
 
 end)
@@ -192,7 +199,7 @@ TextButton.MouseButton1Click:connect(function()
             
             game:GetService("StarterGui"):SetCore("SendNotification",{
                 Title = "AIMLOCK | Corpse ";
-                Text = "No player clicked on, aimlocking towards mouse as normal, Edited by SecretBoy#9833";
+                Text = "No player clicked on, aimlocking towards mouse as normal, Edited Version";
                 Button1 = "Ok";
                 Duration = 2.5;
             })
