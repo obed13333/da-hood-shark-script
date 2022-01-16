@@ -151,6 +151,19 @@ game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function()
     game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid"):WaitForChild("BodyTypeScale").Value = 0.01
 
 end)
+God_Mode.Name = "God_Mode"
+God_Mode.Parent = Display_Main_Frame
+God_Mode.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+God_Mode.BorderColor3 = Color3.fromRGB(0, 0, 0)
+God_Mode.Position = UDim2.new(0.307702988, 0, 0.228168443, 0)
+God_Mode.Size = UDim2.new(0.205630973, 0, 0.101785749, 0)
+God_Mode.Font = Enum.Font.SourceSansSemibold
+God_Mode.Text = "GOD MODE"
+God_Mode.TextColor3 = Color3.fromRGB(255, 255, 255)
+God_Mode.TextSize = 16.000
+God_Mode.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+God_Mode.TextStrokeTransparency = 0.900
+God_Mode.TextWrapped = true
     
     	script.Parent.God_Mode.MouseButton1Click:Connect(function(GOD)
 				plr.Character.BodyEffects:FindFirstChild('BreakingParts'):Destroy()
