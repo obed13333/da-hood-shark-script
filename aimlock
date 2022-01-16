@@ -22,6 +22,7 @@ end
 local LocalPlayer = game:GetService("Players").LocalPlayer
 local Character = LocalPlayer.Character
 local Workspace = game:GetService("Workspace")
+local x = Instance.new("TextButton")
 local CoreGui = game:GetService("CoreGui")
 
 local LockedPlayer = nil
@@ -84,6 +85,22 @@ Frame.Position = UDim2.new(0.30297032, 0, 0.475625843, 0)
 Frame.Size = UDim2.new(0, 397, 0, 211)
 Frame.Active = true
 Frame.Draggable = true
+
+x.Name = "x"
+x.Parent = Frame
+x.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+x.BorderColor3 = Color3.fromRGB(36, 36, 36)
+x.Position = UDim2.new(0.864768684, 0, 0, 0)
+x.Size = UDim2.new(0, 76, 0, 50)
+x.Font = Enum.Font.Oswald
+x.Text = "X"
+x.TextColor3 = Color3.fromRGB(255, 255, 255)
+x.TextScaled = true
+x.TextSize = 14.000
+x.TextWrapped = true
+x.MouseButton1Down:connect(function()
+    game.CoreGui.ScreenGui:Destroy()
+end)
 
 
 
