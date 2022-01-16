@@ -96,7 +96,7 @@ x.Font = Enum.Font.Oswald
 x.Text = "X"
 x.TextColor3 = Color3.fromRGB(255, 255, 255)
 x.TextScaled = true
-x.TextSize = 14.000
+x.TextSize = 11.000
 x.TextWrapped = true
 x.MouseButton1Down:connect(function()
     game.CoreGui.ScreenGui:Destroy()
