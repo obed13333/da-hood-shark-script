@@ -1,21 +1,7 @@
  --// Clone Detection
  game:GetService("StarterGui"):SetCore("SendNotification",{ Title = "CREDITS", Text = "Edited by SecretBoy#9833 THIS IS NOT MY SCRIPT", Button1 = "OK", Duration = 35, })  
  
- TextButton_2.MouseButton1Click:connect(function()
 
-game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid").Health = 0
-game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function()
-    Instance.new("Folder",game:GetService("Players").LocalPlayer.Character).Name = ("FULLY_LOADED_CHAR")
-    game:GetService("Players").LocalPlayer.Character:WaitForChild("BodyEffects"):WaitForChild("Dead"):Remove()
-    Instance.new("BoolValue",game:GetService("Players").LocalPlayer.Character:WaitForChild("BodyEffects")).Name = ("Dead")
-    repeat wait() until game:GetService("Players").LocalPlayer.Character:WaitForChild("BodyEffects"):findFirstChild("Dead")
-    game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid"):WaitForChild("BodyWidthScale").Value = 0.5
-    game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid"):WaitForChild("HeadScale").Value = 1
-    game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid"):WaitForChild("BodyHeightScale").Value = 1
-    game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid"):WaitForChild("BodyDepthScale").Value = 0.5
-    game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid"):WaitForChild("BodyTypeScale").Value = 0.01
-
-end)
  
 for i, v in pairs(game:GetService("CoreGui"):GetChildren()) do
     if v.Name == "ScreenGui" then
@@ -153,21 +139,23 @@ TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextBox.TextSize = 14.000
 
 
-God_Mode.Name = "God_Mode"
-God_Mode.Parent = Display_Main_Frame
-God_Mode.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-God_Mode.BorderColor3 = Color3.fromRGB(0, 0, 0)
-God_Mode.Position = UDim2.new(0.307702988, 0, 0.228168443, 0)
-God_Mode.Size = UDim2.new(0.205630973, 0, 0.101785749, 0)
-God_Mode.Font = Enum.Font.SourceSansSemibold
-God_Mode.Text = "GOD MODE"
-God_Mode.TextColor3 = Color3.fromRGB(255, 255, 255)
-God_Mode.TextSize = 16.000
-God_Mode.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-God_Mode.TextStrokeTransparency = 0.900
-God_Mode.TextWrapped = true
-    
-    	script.Parent.God_Mode.MouseButton1Click:Connect(function(GOD)
+ TextButton_2.MouseButton1Click:connect(function()
+
+game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid").Health = 0
+game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function()
+    Instance.new("Folder",game:GetService("Players").LocalPlayer.Character).Name = ("FULLY_LOADED_CHAR")
+    game:GetService("Players").LocalPlayer.Character:WaitForChild("BodyEffects"):WaitForChild("Dead"):Remove()
+    Instance.new("BoolValue",game:GetService("Players").LocalPlayer.Character:WaitForChild("BodyEffects")).Name = ("Dead")
+    repeat wait() until game:GetService("Players").LocalPlayer.Character:WaitForChild("BodyEffects"):findFirstChild("Dead")
+    game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid"):WaitForChild("BodyWidthScale").Value = 0.5
+    game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid"):WaitForChild("HeadScale").Value = 1
+    game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid"):WaitForChild("BodyHeightScale").Value = 1
+    game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid"):WaitForChild("BodyDepthScale").Value = 0.5
+    game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid"):WaitForChild("BodyTypeScale").Value = 0.01
+
+end)
+
+ TextButton_2.MouseButton1Click:connect(function(GOD)
 				plr.Character.BodyEffects:FindFirstChild('BreakingParts'):Destroy()
 				game:GetService("Players").LocalPlayer.PlayerGui.MainScreenGui.Bar.HP.Picture.Life.Visible = true
 	end)
