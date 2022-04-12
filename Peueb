@@ -118,7 +118,7 @@ function Library:Create(xHubName,xGameName)
 
     local Filler = Instance.new("Frame")
 
-    local Secretagent = Instance.new("TextLabel")
+    local HubName = Instance.new("TextLabel")
     local Line = Instance.new("Frame")
 
     local ActualSide = Instance.new("ScrollingFrame")
