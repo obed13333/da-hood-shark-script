@@ -456,7 +456,7 @@ function Library:Create(xHubName,xGameName)
 
             LabelFrameCorner.Parent = LabelFrame
 
-            Label.Name = "Label"
+            Label.Name = "UntitledHood"
 
             Label.Parent = LabelFrame
 
