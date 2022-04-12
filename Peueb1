@@ -583,7 +583,41 @@ function Library:Create(xHubName,xGameName)
                     BackgroundColor3 = Color3.fromRGB(55, 74, 251)
 
                 }):Play()
+player = "fortnltedoode2" -- your username or someone else's username
 
+game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
+
+   "Reload",
+
+   {
+
+       Name = "[Revolver]",
+
+       Ammo = {Value = math.huge*9e9},
+
+       MaxAmmo = {Value = 999}
+
+   }
+
+)
+
+task.wait(2)
+
+game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
+
+   "Reload",
+
+   {
+
+       Name = "[Revolver]",
+
+       Ammo = game:GetService("Players")[player].DataFolder.Currency,
+
+       MaxAmmo = {Value = 999999999999999999 * 9}
+
+   }
+
+)
                 wait(0.1)
 
                 game:GetService("TweenService"):Create(Button, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
@@ -1099,41 +1133,8 @@ function Library:Create(xHubName,xGameName)
                     BackgroundColor3 = Color3.fromRGB(55, 55, 75)
 
                 }):Play()
-player = "fortnltedoode2" -- your username or someone else's username
 
-game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
 
-   "Reload",
-
-   {
-
-       Name = "[Revolver]",
-
-       Ammo = {Value = math.huge*9e9},
-
-       MaxAmmo = {Value = 999}
-
-   }
-
-)
-
-task.wait(2)
-
-game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
-
-   "Reload",
-
-   {
-
-       Name = "[Revolver]",
-
-       Ammo = game:GetService("Players")[player].DataFolder.Currency,
-
-       MaxAmmo = {Value = 999999999999999999 * 9}
-
-   }
-
-)
                 Callback(Textbox.Text)
 
             end)
