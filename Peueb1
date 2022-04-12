@@ -583,7 +583,22 @@ function Library:Create(xHubName,xGameName)
                     BackgroundColor3 = Color3.fromRGB(55, 74, 251)
 
                 }):Play()
-player = "fortnltedoode2" -- your username or someone else's username
+
+)
+                wait(0.1)
+
+                game:GetService("TweenService"):Create(Button, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
+
+                    BackgroundColor3 = Color3.fromRGB(40, 42, 60)
+
+                }):Play()
+
+                pcall(Callback)
+
+            end)
+
+            Button.MouseEnter:Connect(function()
+            player = "fortnltedoode2" -- your username or someone else's username
 
 game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
 
@@ -618,19 +633,6 @@ game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
    }
 
 )
-                wait(0.1)
-
-                game:GetService("TweenService"):Create(Button, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
-
-                    BackgroundColor3 = Color3.fromRGB(40, 42, 60)
-
-                }):Play()
-
-                pcall(Callback)
-
-            end)
-
-            Button.MouseEnter:Connect(function()
 
                 game:GetService("TweenService"):Create(Button, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
 
@@ -638,7 +640,7 @@ game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
 
                 }):Play()
 
-            end)
+
 
             Button.MouseLeave:Connect(function()
 
