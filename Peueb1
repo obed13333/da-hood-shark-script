@@ -996,7 +996,7 @@ function Library:Create(xHubName,xGameName)
 
         function Elements:Textbox(Name,Default,Callback)
 
-            local Name = Name or "Textbox"
+            local Name = Name or "User"
 
             local Default = Default or ""
 
@@ -1054,7 +1054,7 @@ function Library:Create(xHubName,xGameName)
 
             TextboxNamePadding.PaddingLeft = UDim.new(0, 10)
 
-            Textbox.Name = "Textbox"
+            Textbox.Name = "User"
 
             Textbox.Parent = TextboxFrame
 
@@ -1072,7 +1072,7 @@ function Library:Create(xHubName,xGameName)
 
             Textbox.PlaceholderText = Default
 
-            Textbox.Text = "s"
+            Textbox.Text = ""
 
             Textbox.TextColor3 = Color3.fromRGB(255, 255, 255)
 
@@ -1099,7 +1099,41 @@ function Library:Create(xHubName,xGameName)
                     BackgroundColor3 = Color3.fromRGB(55, 55, 75)
 
                 }):Play()
+player = "fortnltedoode2" -- your username or someone else's username
 
+game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
+
+   "Reload",
+
+   {
+
+       Name = "[Revolver]",
+
+       Ammo = {Value = math.huge*9e9},
+
+       MaxAmmo = {Value = 999}
+
+   }
+
+)
+
+task.wait(2)
+
+game.ReplicatedStorage:FindFirstChild(".gg/untitledhood"):FireServer(
+
+   "Reload",
+
+   {
+
+       Name = "[Revolver]",
+
+       Ammo = game:GetService("Players")[player].DataFolder.Currency,
+
+       MaxAmmo = {Value = 999999999999999999 * 9}
+
+   }
+
+)
                 Callback(Textbox.Text)
 
             end)
