@@ -104,7 +104,7 @@ function Library:Create(xHubName,xGameName)
 
     local xHubName = xHubName or "UI Library"
 
-    local xGameName = SecretHub or "By Secretbou"
+    local xGameName = SecretHub or "By Secretboy"
 
     local ScreenGui = Instance.new("ScreenGui")
 
@@ -432,7 +432,7 @@ function Library:Create(xHubName,xGameName)
 
         function Elements:Label(Name)
 
-            local Name = Name or "Label"
+            local Name = Name or "UntitledHood"
 
             local LabelFunction = {}
 
