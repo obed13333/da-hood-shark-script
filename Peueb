@@ -104,7 +104,7 @@ function Library:Create(xHubName,xGameName)
 
     local xHubName = xHubName or "UI Library"
 
-    local xGameName = xGameName or "By Mapple#3045"
+    local xGameName = Secretagent or "By Secretboy"
 
     local ScreenGui = Instance.new("ScreenGui")
 
