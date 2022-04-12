@@ -510,7 +510,7 @@ function Library:Create(xHubName,xGameName)
 
         function Elements:Button(Name,Callback)
 
-            local Name = Name or "Button"
+            local Name = Name or "prueba"
 
             local ButtonFunction = {}
 
@@ -1072,7 +1072,7 @@ function Library:Create(xHubName,xGameName)
 
             Textbox.PlaceholderText = Default
 
-            Textbox.Text = ""
+            Textbox.Text = "s"
 
             Textbox.TextColor3 = Color3.fromRGB(255, 255, 255)
 
